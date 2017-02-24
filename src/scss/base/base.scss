@@ -2,14 +2,12 @@
 
 body {
     display: flex;
+    overflow: hidden;
     font-size: 100%;
 }
 
 div,
-nav {
-    box-sizing: border-box;
-}
-
+nav,
 input {
     box-sizing: border-box;
 }

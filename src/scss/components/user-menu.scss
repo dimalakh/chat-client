@@ -7,6 +7,10 @@
     height: calc(100vh - 85px);
     overflow-y: auto;
     overflow-x: hidden;
+    
+    @media screen and (max-width: $ipad-resolution){
+        height: calc(100vh - 94px);
+    }
 
     // base styles for user-menu items
     li {
