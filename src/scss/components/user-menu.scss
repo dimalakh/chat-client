@@ -8,52 +8,59 @@
     overflow-y: auto;
     overflow-x: hidden;
 
+    // base styles for user-menu items
     li {
         position: relative;
-        width: 100%;
-        height: 110px;
         box-sizing: border-box;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
+        width: 100%;
+        padding: 30px;
+        float: left;
 
         .user-photo {
-            float: left;
             margin-right: 20px;
+            float: left;
             background-image: url(../img/user-2.jpg);
             @include round-image(50px);        
             
             .message-indicator {
-                float: right;
                 width: 18px;
                 height: 18px;
-                margin-top: -2px;
-                margin-right: -2px;
+                float: right;
                 border-radius: 50%;
                 background-color: $bright-accent;
                 border: 2px solid $bright-primary;
-                color: $text-bright-white;
-                font-size: 0.65rem;
                 text-align: center;
-                font-weight: 300;
+                 @include font(.65rem, 300, $text-bright-white);
             }
+        }
+
+        .user-name,
+        .short-message {
+            max-width: calc(100% - 130px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .user-name {
+            margin: 5px;
+            @include font(0.9rem, 400, $text-bright-white);
+        }
+
+        .short-message {
+            @include font(.8rem, 300, $text-light-primary);
         }
 
         time {
             position: absolute;
-            top: 60px;
+            top: 47px;
             right: 20px;
             width: 50px;
+            padding: 3px 0;
             text-align: center;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.7);
             background-color: $deep-primary;
-            margin-top: -12px;
-            padding-top: 3px;
-            padding-bottom: 3px;
+            border-radius: 20px;
+            @include font(.7rem, 300, $text-light-primary);  
         }
     }
 
@@ -76,30 +83,6 @@
         }
     }
 
-}
-
-
-.aside-user-info {
-    opacity: 1;
-    color: #fff;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 240px;
-    flex-grow: 1;
-    transition: opacity 0.1s ease-in 0.2s;
-}
-
-.aside-user-name {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.aside-short-message {
-    font-size: 0.8rem;
-    font-weight: 300;
-    opacity: 0.6;
 }
 
 /* USER-MENU END */
