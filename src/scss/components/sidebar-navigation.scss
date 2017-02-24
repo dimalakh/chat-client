@@ -1,0 +1,60 @@
+@import '../base/variables';
+
+/* SIDEBAR NAVIGATION START*/
+
+.sidebar-nav {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    
+    form {
+        position: relative;
+    }
+
+    input {
+        margin-top: 1px;
+        padding: 4px 25px 4px 15px;
+        border-radius: $radius;
+        background: $light-primary;
+        color: $text-bright-white;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        transform: scale(.8);
+    }
+
+    .sidebar-toggle:before {
+        display: block;
+        content: "";
+        width: 15px;
+        height: 15px;
+        margin-top: -2px;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        margin-left: 10px;
+        transform: rotate(45deg);
+    }
+
+    .search-icon:before {
+        @include icon(25px, 25px, 2px, -38px);
+    }
+
+    .menu-icon:before {
+        @include icon(22px, 22px, 0, 0);
+    }
+}
+
+/* SIDEBAR NAVIGATION END*/
+
+
+
+
+
+
+

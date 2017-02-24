@@ -1,0 +1,227 @@
+@import '../base/variables';
+
+/* -- SECTION START -- */
+
+section {
+    flex-grow: 1;
+    display: flex;
+    max-height: 100vh;
+    width: calc(100vw - 460px);
+    flex-direction: column;
+    background-color: #fff;
+}
+
+section.toggled {
+    width: calc(100vw - 110px);
+}
+
+.message-icon:before {
+    display: block;
+    content: "";
+    background-image: url('../img/sprite.svg');
+    background-position: 0 -22px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+}
+
+.message-icon:after {
+    float: right;
+    display: block;
+    height: 13px;
+    width: 13px;
+    margin-top: -20px;
+    font-size: 0.65rem;
+    content: "1";
+    color: #fff;
+    background: #ED145B;
+    border-radius: 50%;
+}
+
+.user-icon:before {
+    display: block;
+    content: "";
+    background-image: url('../img/sprite.svg');
+    background-position: 0 -64px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.section-nav {
+    float: left;
+    width: 100%;
+    height: 94px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.section-nav button {
+    padding: 3px;
+    cursor: pointer;
+}
+
+.section-nav button:hover {
+    opacity: 0.6;
+}
+
+
+/*chat*/
+
+.chat-area {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.message-item {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 65px;
+    justify-content: flex-start;
+}
+
+.chat-user-photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    background-image: url(../img/user-2.jpg);
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.chat-message {
+    position: relative;
+    max-width: calc(90% - 70px);
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #fff;
+    font-size: .9rem;
+    background-color: #989AD7;
+    border-radius: 10px;
+}
+
+.chat-message-time {
+    position: absolute;
+    right: 15px;
+    bottom: -25px;
+    color: #CDCDF6;
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.message-item.answer {
+    flex-direction: row-reverse;
+}
+
+.message-item.answer .chat-user-photo {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.message-item.answer .chat-message {
+    color: #3B3B3C;
+    background-color: #F1F1FB;
+}
+
+.message-item.answer .chat-message-time {
+    left: 15px;
+}
+
+
+/*sent form*/
+
+.sent-form {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+
+.sent-form-inner {
+    display: block;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
+
+.message-text {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    max-height: 112px;
+    overflow-y: auto;
+    padding: 0 40px 0 25px;
+    box-sizing: border-box;
+    border-top: 20px solid #EDEDFA;
+    border-bottom: 20px solid #EDEDFA;
+    border-radius: 28px;
+    background: #EDEDFA;
+    font-size: .9rem;
+    color: #858588;
+    word-break: break-word;
+}
+
+.attach-smile {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 15px;
+}
+
+.attach-smile:before {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: url('../img/smile.svg');
+}
+
+.attach-smile:hover {
+    opacity: .6;
+}
+
+.attach-file {
+    float: left;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.attach-file+label {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: -40px;
+}
+
+.attach-file+label:before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url("../img/attach.svg");
+}
+
+.attach-file:focus+label,
+.attach-file+label:hover {
+    opacity: 0.6;
+}
+
+
+/* SECTION END */

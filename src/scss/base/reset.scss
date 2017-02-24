@@ -1,0 +1,25 @@
+/*reset base styles*/
+body,
+html,
+button,
+input,
+textarea,
+form,
+ul,
+li,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    background: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+/*end of reseting styles*/

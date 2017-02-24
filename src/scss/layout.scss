@@ -1,0 +1,41 @@
+@import 'base/variables';
+
+/* SIDEBAR */
+
+aside {
+    width: 460px;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $bright-primary;
+    transition: all .35s ease-out 0s;
+}
+
+// styles for elements when sidebar isn't expanded
+aside.toggled {
+    width: 110px;
+
+    input,
+    .search-icon,
+    .aside-user-info,
+    .aside-spend-time {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    .sidebar-nav {
+        display: block;
+    }
+
+    // rotate toggle button on click
+    .sidebar-toggle:before {
+        transform: rotate(225deg);
+        margin-left: 0;
+        margin-right: 5px;
+    }
+
+}
+
+/* SIDEBAR END */

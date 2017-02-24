@@ -1,0 +1,34 @@
+// BACKGROUND COLORS
+$deep-primary: #37398D;
+$bright-primary: #3B3E99;
+$light-primary: #7073CC;
+$bright-accent: #ed145b;
+$light-accent: #F23F79;
+$light-grey: #EDEDFA;
+$absolute-white: #fff;
+
+// TEXT COLORS
+$text-bright-accent: #ed145b;
+$text-bright-white: #fff;
+
+// OTHER VARIABLES
+$radius: 10px;
+
+// MIXINS 
+@mixin icon($width, $height, $positon-x, $position-y) {
+    display: block;
+    content: "";
+    width: $width;
+    height: $height;
+    background-image: url('../img/sprite.svg');
+    background-position: $positon-x $position-y;
+    background-repeat: no-repeat;
+}
+
+@mixin round-image($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-size: 100% auto;
+    background-position: center;
+}
