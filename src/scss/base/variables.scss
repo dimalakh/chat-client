@@ -8,8 +8,10 @@ $light-grey: #EDEDFA;
 $absolute-white: #fff;
 
 // TEXT COLORS
+$text-light-primary: rgba(255, 255, 255, 0.7);
 $text-bright-accent: #ed145b;
 $text-bright-white: #fff;
+
 
 // OTHER VARIABLES
 $radius: 10px;
@@ -31,4 +33,10 @@ $radius: 10px;
     border-radius: 50%;
     background-size: 100% auto;
     background-position: center;
+}
+
+@mixin font($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
 }
